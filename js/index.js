@@ -18,7 +18,7 @@ let lastTotalPrice = document.getElementById('total-field');
 
 
 
-// memory costing
+// memory costing 8gb
 document.getElementById('memory-price-8GB').addEventListener('click', function () {
     memoryPriceField.innerText = '0';
 
