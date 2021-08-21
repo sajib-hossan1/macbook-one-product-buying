@@ -1,9 +1,12 @@
 //  memory price field
 let memoryPriceField = document.getElementById('memory-price-field');
+
 // storage price field
 let storagePriceField = document.getElementById('storage-price-field');
+
 // delivery charge field
 let deliveryChargeField = document.getElementById('delivery-charge-field');
+
 // best price field
 let bestPriceField = document.getElementById('best-price-field');
 
@@ -14,13 +17,24 @@ let totalPriceField = document.getElementById('total-price-field');
 let lastTotalPrice = document.getElementById('total-field');
 
 
-
-// memory costing
-document.getElementById('default-memory-price').addEventListener('click', function () {
-    memoryPriceField.innerText = '0';
+function memoryCosting(input1, input2) {
+    memoryPriceField.innerText = 'memory-price-' + input1;
 
     // adding to total price
     updateTotal()
+}
+
+
+// memory costing
+document.getElementById('memory-price-8GB').addEventListener('click', function () {
+
+
+
+
+    /* memoryPriceField.innerText = '0';
+
+    // adding to total price
+    updateTotal() */
 
 })
 
@@ -79,6 +93,7 @@ document.getElementById('prime-delivery').addEventListener('click', function () 
     updateTotal()
 })
 
+// update total price
 function updateTotal() {
     const productPrice = parseInt(bestPriceField.innerText);
     const memoryPrice = parseInt(memoryPriceField.innerText);
@@ -89,6 +104,8 @@ function updateTotal() {
     lastTotalPrice.innerText = totalPrice;
 }
 
+
+// adding promo code
 document.getElementById('promo-btn').addEventListener('click', function () {
     const promoCodeField = document.getElementById('promo-code-field');
 
