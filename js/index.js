@@ -17,30 +17,19 @@ let totalPriceField = document.getElementById('total-price-field');
 let lastTotalPrice = document.getElementById('total-field');
 
 
-function memoryCosting(input1, input2) {
-    memoryPriceField.innerText = 'memory-price-' + input1;
-
-    // adding to total price
-    updateTotal()
-}
-
 
 // memory costing
 document.getElementById('memory-price-8GB').addEventListener('click', function () {
-
-
-
-
-    /* memoryPriceField.innerText = '0';
+    memoryPriceField.innerText = '0';
 
     // adding to total price
-    updateTotal() */
+    updateTotal()
 
 })
 
 // memory 16gb
 document.getElementById('memory-price-16GB').addEventListener('click', function () {
-    memoryPriceField.innerText = '100';
+    memoryPriceField.innerText = '180';
 
     // adding to total price
     updateTotal()
