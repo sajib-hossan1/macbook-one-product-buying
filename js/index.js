@@ -99,9 +99,14 @@ document.getElementById('promo-btn').addEventListener('click', function () {
     const promoCodeField = document.getElementById('promo-code-field');
 
     if (promoCodeField.value == 'stevekaku') {
-        const discount = parseFloat(lastTotalPrice.innerText) * .20;
+        // this is my first code which was wrong and 1 mark has been minus from my fifth assignment mark and i got 59
+        /* const discount = parseFloat(lastTotalPrice.innerText) * .20;
         const total = parseFloat(lastTotalPrice.innerText) - discount;
-        lastTotalPrice.innerText = total;
+        lastTotalPrice.innerText = total; */
+
+        // this is my new and updated right code
+        const discount = parseFloat(totalPriceField.innerText) - parseFloat(totalPriceField.innerText) * .20;
+        lastTotalPrice.innerText = discount;
     } else {
         console.log('you put wrong promo code');
     }
